@@ -6,7 +6,7 @@ const cred = require("./lib/credentials")
 let credentials = new cred().get()
 let g = new gem(credentials.gem.user,credentials.gem.pass);
 
-let task = cron.schedule("10 13 * * *",function(){
+let task = cron.schedule("* 20 * * *",function(){
     g.login(l=>{
         g.llamado(x=>{
             let  a = new fcm();
