@@ -33,11 +33,11 @@ it.only("LLamado+notif",function (done){
     g.login(l=>{
         g.llamadof(x=>{
             let  a = new fcm();
-            
             for(let g of x){
             a.send(g.lugar_trabajo,`${g.fecha_llamado} - ${g.lugar_trabajo}-${g.direccion}-${g.localidad}`,
-            y=>{done()})        
-        }
+            y=>{})        
+        	}
+	    done()
         });
     });
 })
