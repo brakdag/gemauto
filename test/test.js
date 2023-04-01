@@ -29,7 +29,7 @@ it("FCM",function(done){
      
 });
 
-it.only("LLamado+notif",function (done){ 
+it("LLamado+notif",function (done){ 
     g.login(l=>{
         g.llamadof(x=>{
             let  a = new fcm();

@@ -3,7 +3,17 @@ const gem = require("./lib/index")
 const fcm = require("./lib/fcm")
 const cred = require("./lib/credentials")
 
+const monitor = require("./lib/monitor")
+
+
+
+
 let credentials = new cred().get()
+
+
+let mon = new monitor(credentials.gem.user,credentials.gem.pass)
+
+
 let g = new gem(credentials.gem.user,credentials.gem.pass);
 
 let task = cron.schedule("15 20 * * *",function(){
@@ -17,4 +27,19 @@ let task = cron.schedule("15 20 * * *",function(){
     });
 });
 
-task.start();
+
+
+let monitor = cron.schedule("1 * * * * *",function(){
+    g.login(l=>{
+        g.llamado(x=>{
+            console.log(new Date(),x.map(a=>a.id))
+        });
+    });
+}); 
+
+
+
+
+
+
+monitor.start();
