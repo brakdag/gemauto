@@ -8,7 +8,7 @@ let mon = new monitor(credentials.gem.user,credentials.gem.pass)
 
 
 describe("Monitor Test",function(){
-    it.only("Create monitor",function (done){ 
+    it("Create monitor",function (done){ 
         let mon = new monitor(credentials.gem.user,credentials.gem.pass)
         done()
     })

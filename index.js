@@ -29,17 +29,5 @@ let task = cron.schedule("15 20 * * *",function(){
 
 
 
-let monitor = cron.schedule("1 * * * * *",function(){
-    g.login(l=>{
-        g.llamado(x=>{
-            console.log(new Date(),x.map(a=>a.id))
-        });
-    });
-}); 
 
 
-
-
-
-
-monitor.start();
