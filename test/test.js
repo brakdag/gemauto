@@ -1,4 +1,4 @@
-const gem = require("../lib/index") 
+const gem = require("../lib/gempad") 
 const fcm = require("../lib/fcm")
 const cred = require("../lib/credentials")
 
