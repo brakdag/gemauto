@@ -1,6 +1,6 @@
 const cred = require("../lib/credentials")
 const gem = require("../lib/gempad") 
-const dis = require("../lib/worker")
+const dis = require("../lib/dispatch")
 
 let credentials = new cred().get()
 let d = new dis();
