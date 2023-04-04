@@ -14,8 +14,4 @@ it("create monitor",function(){
      mon = new monitor(credentials.gem.user,credentials.gem.pass)
 })
 
-    it("Create monitor",function (done){ 
-        let mon = new monitor(credentials.gem.user,credentials.gem.pass)
-        done()
-    })
 })

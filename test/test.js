@@ -7,7 +7,7 @@ let credentials = new cred().get()
 const g = new gem(credentials.gem.user,credentials.gem.pass);
 
 describe("Testeando",function(){
-it.only("Login",function (done){ 
+it("Login",function (done){ 
         g.login(l=>{
             g.llamadod(x=>{
                 g.llamado(y=>{
