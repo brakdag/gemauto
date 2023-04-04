@@ -10,9 +10,10 @@ COPY package*.json ./
 
 RUN npm install
 # If you are building your code for production
-# RUN npm install --only=production
+# RUN npm ci --omit=dev
 
 # Bundle app source
 COPY . .
 
-CMD npm start
+
+CMD [ "node", "index.js" ]
