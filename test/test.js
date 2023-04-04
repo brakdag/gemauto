@@ -20,7 +20,7 @@ it("Login",function (done){
         })
 })
 
-it("FCM",function(done){
+it.only("FCM",function(done){
     let  a = new fcm();
     a.send("prueba","gustavo",(x)=>{
         console.log(x)

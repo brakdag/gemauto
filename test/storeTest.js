@@ -4,7 +4,7 @@ const path = "./data/bucket.json"
 
 let store = new st(path)
 
-describe.only("Store data",function(){
+describe("Store data",function(){
    
     it("loading data",function(){
         let data= store.getFullData()
@@ -20,7 +20,7 @@ describe.only("Store data",function(){
     });
 
     it("has function return false",function(){
-        store.has("kaka").should.to.not.equal(true);
+        store.has("kaka").should.to.equal(false);
     });
 
     
