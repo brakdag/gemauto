@@ -23,6 +23,6 @@ describe("Store data",function(){
         store.has("kaka").should.to.equal(false);
     });
 
-    
+
 
 })

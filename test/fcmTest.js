@@ -1,5 +1,5 @@
 const fcm = require("../lib/fcm")
-describe.only("Testeando FCM",function(){
+describe("Testeando FCM",function(){
 
 it("FCM",function(done){
     let  a = new fcm();
