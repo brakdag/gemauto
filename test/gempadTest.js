@@ -1,5 +1,4 @@
 const gem = require("../lib/gempad") 
-const fcm = require("../lib/fcm")
 const cred = require("../lib/credentials")
 
 let credentials = new cred().get()
@@ -20,27 +19,7 @@ it("Login",function (done){
         })
 })
 
-it.only("FCM",function(done){
-    let  a = new fcm();
-    a.send("prueba","gustavo",(x)=>{
-        console.log(x)
-        done();
-    });
-     
-});
 
-it("LLamado+notif",function (done){ 
-    g.login(l=>{
-        g.llamadof(x=>{
-            let  a = new fcm();
-            for(let g of x){
-            a.send(g.lugar_trabajo,`${g.fecha_llamado} - ${g.lugar_trabajo}-${g.direccion}-${g.localidad}`,
-            y=>{})        
-        	}
-	    done()
-        });
-    });
-})
 
 
 
