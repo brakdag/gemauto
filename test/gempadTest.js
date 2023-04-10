@@ -2,26 +2,34 @@ const gem = require("../lib/gempad")
 const cred = require("../lib/credentials")
 
 let credentials = new cred().get()
-
 const g = new gem(credentials.gem.user,credentials.gem.pass);
 
-describe("Testeando",function(){
-it("Login",function (done){ 
+describe.only("Gempad test",function(){
+    it("Login",function (done){ 
         g.login(l=>{
-            g.llamadod(x=>{
-                g.llamado(y=>{
-                    let m = x.concat(y)
-                m=m.map(a=>[a.id*1,`${a.fecha_llamado} - ${a.lugar_trabajo}-${a.direccion}-${a.localidad}`])
-                console.log(m)
-                done()
-                })
-            })
+            console.log(l)
+            done()
         })
+    })
+    it("escritorio",function (done){ 
+            g.escritorio(l=>{
+      //          console.log(l)
+                done()
+            })
+    });
+
+    it("llamado",function (done){ 
+        g.llamado(l=>{
+            console.log(l)
+            done()})
+    })
+
+    it("llamados del día",function (done){ 
+        g.llamadod(l=>{done()})
+    })
+    it("lamados de día y posteriores",function (done){ 
+        g.llamadof(l=>{done()})
 })
-
-
-
-
 
 
 
