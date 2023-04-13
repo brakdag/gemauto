@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.send('Servidor gemauto funcionando')
 })
 
-app.listen(8080, () => {
+app.listen(8000, () => {
   console.log('Servidor gemauto en 8000')
 })
 
