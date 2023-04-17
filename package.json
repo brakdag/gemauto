@@ -8,8 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test --timeout 60000",
-    "start": "node index"
+    "test": "npx mocha test --timeout 60000",
+    "start": "node index",
+    "lint": "npx eslint ./*.js ./lib/*.js --fix"
   },
   "author": "",
   "license": "MIT",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "eslint": "^8.38.0",
+    "eslint-config-google": "^0.14.0",
     "mocha": "^10.2.0"
   }
 }
