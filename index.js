@@ -9,6 +9,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   res.send('Servidor gemauto funcionando');
+
 });
 
 app.get('/exit', (req, res) => {
