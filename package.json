@@ -10,7 +10,8 @@
   "scripts": {
     "test": "npx mocha test --timeout 600000",
     "start": "node index",
-    "lint": "npx eslint ./*.js ./lib/*.js --fix"
+    "lint": "npx eslint ./*.js ./lib/*.js --fix",
+    "deploy":"npm install && npm start"
   },
   "author": "",
   "license": "MIT",

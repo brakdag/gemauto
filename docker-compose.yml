@@ -7,7 +7,7 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-    command: npm start
+    command: npm deploy
     ports:
       - "8000:8000"
     restart:  always
